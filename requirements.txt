@@ -4,3 +4,4 @@ accelerate
 verovio
 tiktoken
 streamlit
+torchvision
