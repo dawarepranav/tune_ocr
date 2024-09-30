@@ -54,4 +54,5 @@ Test the fine-tuned model with sample test images included in the repository.
 
 🧠 Fine-Tuning Process
 The fine-tuning was performed using SWIFT (Scalable lightWeight Infrastructure for Fine-Tuning). This allows efficient model adaptation with minimal computational resources.
+file : Fine_tune_code.ipynb
 
