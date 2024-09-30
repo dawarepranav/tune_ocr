@@ -27,3 +27,31 @@ To run this project, install the following dependencies:
 
 ```bash
 pip install transformers verovio torch torchvision accelerate tiktoken gradio
+```
+🛠️ Usage
+Follow these steps to use the fine-tuned model in your project:
+
+Load the model and tokenizer:
+```python
+
+from transformers import AutoModel, AutoTokenizer
+
+# Path to your fine-tuned model
+model_path = 'pranavdaware/web_ocr'
+
+# Load the tokenizer and model
+tokenizer = AutoTokenizer.from_pretrained(model_path, trust_remote_code=True)
+model = AutoModel.from_pretrained(model_path, trust_remote_code=True, low_cpu_mem_usage=True, device_map='cuda', use_safetensors=True)
+
+# Set the model to evaluation mode
+model = model.eval().cuda()
+```
+Demo:
+Try the demo in Google Colab: https://colab.research.google.com/drive/1SERRAu0tG9lLagUkOpI4eOZx2Po7z3rY?usp=sharing 
+
+📊 Sample Data
+Test the fine-tuned model with sample test images included in the repository.
+
+🧠 Fine-Tuning Process
+The fine-tuning was performed using SWIFT (Scalable lightWeight Infrastructure for Fine-Tuning). This allows efficient model adaptation with minimal computational resources.
+
