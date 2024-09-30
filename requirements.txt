@@ -1,0 +1,6 @@
+gradio
+transformers
+accelerate
+verovio
+tiktoken
+streamlit
